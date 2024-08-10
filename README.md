@@ -1,4 +1,4 @@
-# Skin Microbiome Project Example
+# Skin Microbiome Project Example Tutorial
 Trial QIIME2 Pipeline in collected data
 ## Publication
 https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5710430/#note-DOI170016-1-s
