@@ -134,7 +134,7 @@ qiime feature-table filter-features \
     --o-visualization taxa-bar-plots.qzv
 ```
 ## Alpha/Beta diversity measurement
-  Take a look at feature table
+  
   ```bash
   qiime feature-table summarize \
   --i-table table.qza \
@@ -144,7 +144,7 @@ qiime feature-table filter-features \
   --i-data rep-seqs.qza \
   --o-visualization rep-seqs.qzv
   ```
-  Sample had lowest read ~ 759. Run diversity metrics with p-sampling-depth = 759
+
   ```bash
   qiime diversity core-metrics-phylogenetic \
   --i-phylogeny rooted-tree.qza \
