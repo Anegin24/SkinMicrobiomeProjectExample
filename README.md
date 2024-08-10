@@ -102,5 +102,23 @@ qiime feature-classifier extract-reads --i-sequences silva138_noEuk_AB_seqs_uniq
 qiime rescript dereplicate --i-sequences silva138_AB_V3-V4seqs.qza --i-taxa silva138_noEuk_AB_tax_uniq.qza --o-dereplicated-sequences silva138_AB_V3-V4seqs_uniq.qza --o-dereplicated-taxa silva138_AB_V3-V4taxa_uniq.qza
 qiime rescript evaluate-fit-classifier --i-sequences silva138_AB_V3-V4seqs_uniq.qza --i-taxonomy silva138_AB_V3-V4taxa_uniq.qza --o-classifier silva138_AB_V3-V4_classifier.qza --o-observed-taxonomy silva138_AB_V3-V4_predicted_taxonomy.qza --o-evaluation silva138_AB_V3-V4_classifier_eval.qzv --p-n-jobs 0
 ```
+### Filtering 18S sequences using "qiime quality-control exclude-seqs"
+```bash
+qiime quality-control exclude-seqs \
+  --i-query-sequences query-seqs.qza \
+  --i-reference-sequences reference-seqs.qza \
+  --p-method blast \
+  --p-perc-identity 0.97 \
+  --p-perc-query-aligned 0.97 \
+  --o-sequence-hits hits.qza \
+  --o-sequence-misses misses.qza
+```
+```bash
+qiime feature-table filter-features \
+  --i-table query-table.qza \
+  --m-metadata-file hits.qza \
+  --o-filtered-table no-hits-filtered-table.qza \
+  --p-exclude-ids
+```
 ## Taxonomy classifier
 ## Alpha/Beta diversity measurement
