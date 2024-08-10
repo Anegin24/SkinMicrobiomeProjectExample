@@ -20,11 +20,12 @@ Biopsy specimens were analyzed at the Department of Microbiology and Infection C
   ```
 4. Download data:
    
-    Get this file in Trace link
+  Get this file in Trace link
   ```bash
     SraAccList.txt
   ```
-    After that run this command:
+  After that run this command:
+    
   ```bash
     prefetch --option-file SraAccList.txt
     find . -name '*.sra' -print0 | xargs -0 mv -t . 
