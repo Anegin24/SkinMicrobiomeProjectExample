@@ -77,19 +77,6 @@ Biopsy specimens were analyzed at the Department of Microbiology and Infection C
   --o-representative-sequences rep-seqs.qza \
   --o-denoising-stats denoising-stats.qza
 ```
-Visualization
-  ```bash
-  qiime feature-table summarize \
-    --i-table table.qza \
-    --o-visualization table.qzv \
-    --m-sample-metadata-file sample-metadata.tsv
-  qiime feature-table tabulate-seqs \
-    --i-data rep-seqs.qza \
-    --o-visualization rep-seqs.qzv
-  qiime metadata tabulate \
-    --m-input-file denoising-stats.qza \
-    --o-visualization denoising-stats.qzv
-  ```
 ## Generate Silva database
 ### Generate 16S V3-V4 amplicon reference
 ```bash
@@ -131,7 +118,7 @@ qiime feature-table filter-features \
   ```
 ## Taxonomy classifier
  ```bash
-    qiime feature-classifier classify-sklearn \
+  qiime feature-classifier classify-sklearn \
       --i-classifier silva138_AB_V3-V4_classifier.qza \
       --i-reads rep-seqs.qza \
       --o-classification taxonomy.qza
@@ -144,4 +131,25 @@ qiime feature-table filter-features \
     --m-metadata-file sample-metadata.tsv \
     --o-visualization taxa-bar-plots.qzv
 ## Alpha/Beta diversity measurement
+  Take a look at feature table:
+  ```bash
+  qiime feature-table summarize \
+  --i-table table.qza \
+  --o-visualization table.qzv \
+  --m-sample-metadata-file sample-metadata.tsv
+  qiime feature-table tabulate-seqs \
+  --i-data rep-seqs.qza \
+  --o-visualization rep-seqs.qzv
+  ```
+  Sample had lowest read ~ 759. Run diversity metrics with p-sampling-depth = 759
+
+  ```bash
+  qiime diversity core-metrics-phylogenetic \
+  --i-phylogeny rooted-tree.qza \
+  --i-table table.qza \
+  --p-sampling-depth 75987 \
+  --m-metadata-file sample-metadata.tsv \
+  --output-dir core-metrics-results
+  ```
+  
 ## Differential Significant
