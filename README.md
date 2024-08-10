@@ -34,6 +34,7 @@ Biopsy specimens were analyzed at the Department of Microbiology and Infection C
 ```
 ## Import Fastq to QIIME2
   We perform importing data to QIIME2 following manifest protocol:
+  
   Step 1: generate manifest file
 ```bash
   echo -e 'sample-id\tforward-absolute-filepath\treverse-absolute-filepath' > manifest.tsv
