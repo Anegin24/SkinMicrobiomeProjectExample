@@ -58,7 +58,7 @@ Biopsy specimens were analyzed at the Department of Microbiology and Infection C
   --output-path reads.qza \
   --input-format PairedEndFastqManifestPhred33V2
 ```
-## Visualization quality control
+  Visualization quality control
 ```bash
   qiime demux summarize \
   --i-data reads.qza \
