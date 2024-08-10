@@ -5,7 +5,7 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5710430/#note-DOI170016-1-s
 
 Biopsy specimens were analyzed at the Department of Microbiology and Infection Control, Statens Serum Institut, Copenhagen, Denmark. DNA was extracted using a kit (QIAamp DNA Mini Kit; Qiagen) according to the manufacturer’s instructions for tissues. For each batch of DNA extraction, a “negative” control was included containing buffers but no sample material for downstream analysis. DNA was amplified using a 2-step polymerase chain reaction using custom 341F/806R primers targeting the V3-V4 16S regions, as well as 3 primer sets targeting the hypervariable regions V3-V4 of the 18SrDNA gene, and amplicons were sequenced on a desktop sequencer (MiSeq; Illumina, Inc) using the v2 reagent kit. For details concerning primer design and library preparation, see the eAppendix in the Supplement. Sequence data are available at the European Nucleotide Archive (accession number PRJEB15266).
 ## Collect data using SRAtoolkit
-1. trace ncbi: https://www.ncbi.nlm.nih.gov/Traces/study/?acc=ERP016977&o=acc_s%3Aa
+1. Trace ncbi: https://www.ncbi.nlm.nih.gov/Traces/study/?acc=ERP016977&o=acc_s%3Aa
 2. Download data
 3. Install SRAtoolkit
 ```bash
