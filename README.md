@@ -122,6 +122,7 @@ qiime feature-table filter-features \
       --i-classifier silva138_AB_V3-V4_classifier.qza \
       --i-reads rep-seqs.qza \
       --o-classification taxonomy.qza
+      --p-n-jobs 20
   qiime metadata tabulate \
     --m-input-file taxonomy.qza \
     --o-visualization taxonomy.qzv
