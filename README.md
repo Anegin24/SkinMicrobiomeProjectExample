@@ -147,7 +147,7 @@ qiime feature-table filter-features \
   qiime diversity core-metrics-phylogenetic \
   --i-phylogeny rooted-tree.qza \
   --i-table table.qza \
-  --p-sampling-depth 75987 \
+  --p-sampling-depth 759 \
   --m-metadata-file sample-metadata.tsv \
   --output-dir core-metrics-results
   ```
