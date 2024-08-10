@@ -41,7 +41,7 @@ Biopsy specimens were analyzed at the Department of Microbiology and Infection C
 ## Import Fastq to QIIME2
   We perform importing data to QIIME2 following manifest protocol:
   
-  Step 1: Generate manifest file
+  1. Generate manifest file
 ```bash
   echo -e 'sample-id\tforward-absolute-filepath\treverse-absolute-filepath' > manifest.tsv
   for FOR in reads/*_1*gz;
@@ -50,7 +50,7 @@ Biopsy specimens were analyzed at the Department of Microbiology and Infection C
   echo -e "${ID}\t${PWD}/${FOR}\t${PWD}/${REV}";
   done >>manifest.tsv
 ```
-  Step 2: Import to QIIME2
+  2. Import to QIIME2
 ```bash
   qiime tools import \
   --type 'SampleData[PairedEndSequencesWithQuality]' \
@@ -58,7 +58,7 @@ Biopsy specimens were analyzed at the Department of Microbiology and Infection C
   --output-path reads.qza \
   --input-format PairedEndFastqManifestPhred33V2
 ```
-  Visualization quality control
+  3. Visualization quality control
 ```bash
   qiime demux summarize \
   --i-data reads.qza \
