@@ -24,6 +24,8 @@ Biopsy specimens were analyzed at the Department of Microbiology and Infection C
 ```bash
   SraAccList.txt
 ```
+  After that run this command:
+```bash
   prefetch --option-file SraAccList.txt
   find . -name '*.sra' -print0 | xargs -0 mv -t . 
   find . -type d -empty -delete
