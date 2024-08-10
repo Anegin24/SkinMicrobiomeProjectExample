@@ -13,7 +13,8 @@ Biopsy specimens were analyzed at the Department of Microbiology and Infection C
     conda config --add channels conda-forge
     conda config --show channels
   ```
-    Install SRAtoolkit:
+  Install SRAtoolkit:
+    
   ```bash
     conda create -n sratool sra-tools
     conda env list 
