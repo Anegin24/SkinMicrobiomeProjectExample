@@ -7,6 +7,17 @@ Biopsy specimens were analyzed at the Department of Microbiology and Infection C
 ## Collect data using SRAtoolkit
 1. trace ncbi: https://www.ncbi.nlm.nih.gov/Traces/study/?acc=ERP016977&o=acc_s%3Aa
 2. Download data
+3. Install SRAtoolkit
+```bash
+  conda config --add channels bioconda
+  conda config --add channels conda-forge
+  conda config --show channels
+```
+Install SRAtoolkit:
+```bash
+conda create -n sratool sra-tools
+conda env list 
+```
 ## Import data to QIIME2
 ## Visualization quality control
 ## Denoising using DADA2
