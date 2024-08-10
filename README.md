@@ -19,11 +19,11 @@ Biopsy specimens were analyzed at the Department of Microbiology and Infection C
   conda env list 
 ```
   Download data:
-  Get
+
+  Get this file in Trace link
 ```bash
   SraAccList.txt
-```in trace link. After that run this command:
-```bash
+```
   prefetch --option-file SraAccList.txt
   find . -name '*.sra' -print0 | xargs -0 mv -t . 
   find . -type d -empty -delete
