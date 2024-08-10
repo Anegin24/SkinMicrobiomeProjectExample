@@ -94,7 +94,7 @@ qiime rescript evaluate-fit-classifier --i-sequences silva138_AB_V3-V4seqs_uniq.
 qiime quality-control exclude-seqs \
   --i-query-sequences rep-seqs.qza \
   --i-reference-sequences silva138_AB_V3-V4seqs_uniq.qza \
-  --p-method blast \
+  --p-method vseach \
   --p-perc-identity 0.97 \
   --p-perc-query-aligned 0.97 \
   --o-sequence-hits hits.qza \
@@ -114,7 +114,8 @@ qiime feature-table filter-features \
   --o-alignment aligned-rep-seqs.qza \
   --o-masked-alignment masked-aligned-rep-seqs.qza \
   --o-tree unrooted-tree.qza \
-  --o-rooted-tree rooted-tree.qza
+  --o-rooted-tree rooted-tree.qza \
+  --p-n-threads 20
   ```
 ## Taxonomy classifier
  ```bash
