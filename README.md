@@ -19,6 +19,7 @@ qiime taxa filter-seqs --i-sequences silva-138-ssu-nr99-seqs-cleaned.qza --i-tax
 qiime rescript filter-seqs-length-by-taxon --i-sequences silva138_noEuk_seqs.qza --i-taxonomy silva-138-ssu-nr99-tax.qza --p-labels Archaea Bacteria --p-min-lens 900 1200 --o-filtered-seqs silva138_noEuk_AB_seqs.qza --o-discarded-seqs silva138_Euk_seqs_discard.qza
 qiime rescript dereplicate --i-sequences silva138_noEuk_AB_seqs.qza --i-taxa silva-138-ssu-nr99-tax.qza --p-threads 12 --o-dereplicated-sequences silva138_noEuk_AB_seqs_uniq.qza --o-dereplicated-taxa silva138_noEuk_AB_tax_uniq.qza
 qiime feature-classifier extract-reads --i-sequences silva138_noEuk_AB_seqs_uniq.qza --p-f-primer ACTCCTAYGGGRBGCASCAG --p-r-primer AGCGTGGACTACNNGGGTATCTAAT --p-n-jobs 12 --o-reads silva138_AB_V3-V4seqs.qza
+qiime rescript dereplicate --i-sequences silva138_AB_V3-V4seqs.qza --i-taxa silva138_noEuk_AB_tax_uniq.qza --o-dereplicated-sequences silva138_AB_V3-V4seqs_uniq.qza --o-dereplicated-taxa silva138_AB_V3-V4taxa_uniq.qza
 ```
 ## Taxonomy classifier
 ## Alpha/Beta diversity measurement
