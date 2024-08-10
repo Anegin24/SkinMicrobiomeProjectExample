@@ -13,12 +13,44 @@ Biopsy specimens were analyzed at the Department of Microbiology and Infection C
   conda config --add channels conda-forge
   conda config --show channels
 ```
-Install SRAtoolkit:
+  Install SRAtoolkit:
 ```bash
-conda create -n sratool sra-tools
-conda env list 
+  conda create -n sratool sra-tools
+  conda env list 
 ```
-## Import data to QIIME2
+  Download data:
+  1. Get SraAccList.txt in trace link. After that run this command:
+```bash
+  prefetch --option-file SraAccList.txt
+  find . -name '*.sra' -print0 | xargs -0 mv -t . 
+  find . -type d -empty -delete
+  ls *.sra | parallel -j0 fastq-dump --split-files --origfmt {}
+  mkdir fastq
+  mv *.fastq fastq
+  cd fastq
+  gzip fastq
+  mkdir sra
+  mv *.sra sra
+```
+## Import Fastq to QIIME2
+  We perform importing data to QIIME2 following manifest protocol:
+  Step 1: generate manifest file
+```bash
+  echo -e 'sample-id\tforward-absolute-filepath\treverse-absolute-filepath' > manifest.tsv
+  for FOR in reads/*_1*gz;
+  do ID=$(basename $FOR | cut -f1 -d_);
+  REV=${FOR/_1/_2};
+  echo -e "${ID}\t${PWD}/${FOR}\t${PWD}/${REV}";
+  done >>manifest.tsv
+```
+  Step 2: Import to QIIME2
+```bash
+  qiime tools import \
+  --type 'SampleData[PairedEndSequencesWithQuality]' \
+  --input-path manifest.tsv \
+  --output-path reads.qza \
+  --input-format PairedEndFastqManifestPhred33V2
+```
 ## Visualization quality control
 ## Denoising using DADA2
 ## Generate Silva database
