@@ -76,6 +76,19 @@ Biopsy specimens were analyzed at the Department of Microbiology and Infection C
   --o-representative-sequences rep-seqs.qza \
   --o-denoising-stats denoising-stats.qza
 ```
+Visualization
+  ```bash
+  qiime feature-table summarize \
+    --i-table table.qza \
+    --o-visualization table.qzv \
+    --m-sample-metadata-file sample-metadata.tsv
+  qiime feature-table tabulate-seqs \
+    --i-data rep-seqs.qza \
+    --o-visualization rep-seqs.qzv
+  qiime metadata tabulate \
+    --m-input-file denoising-stats.qza \
+    --o-visualization denoising-stats.qzv
+  ```
 ## Generate Silva database
 ### Generate 16S V3-V4 amplicon reference
 ```bash
