@@ -105,8 +105,8 @@ qiime rescript evaluate-fit-classifier --i-sequences silva138_AB_V3-V4seqs_uniq.
 ### Filtering 18S sequences using "qiime quality-control exclude-seqs"
 ```bash
 qiime quality-control exclude-seqs \
-  --i-query-sequences query-seqs.qza \
-  --i-reference-sequences reference-seqs.qza \
+  --i-query-sequences rep-seqs.qza \
+  --i-reference-sequences silva138_AB_V3-V4seqs_uniq.qza \
   --p-method blast \
   --p-perc-identity 0.97 \
   --p-perc-query-aligned 0.97 \
@@ -115,9 +115,9 @@ qiime quality-control exclude-seqs \
 ```
 ```bash
 qiime feature-table filter-features \
-  --i-table query-table.qza \
-  --m-metadata-file hits.qza \
-  --o-filtered-table no-hits-filtered-table.qza \
+  --i-table table.qza \
+  --m-metadata-file misses.qza \
+  --o-filtered-table filtered-table.qza \
   --p-exclude-ids
 ```
 ## Taxonomy classifier
