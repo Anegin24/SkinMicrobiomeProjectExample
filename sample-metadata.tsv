@@ -1,0 +1,85 @@
+sample-id	Name	Group	Class
+#q2:types	categorical	categorical	categorical
+ERR1607585	healthy.biopsy.01	Healthy	Healthy
+ERR1607586	healthy.biopsy.02	Healthy	Healthy
+ERR1607587	healthy.biopsy.05	Healthy	Healthy
+ERR1607588	healthy.biopsy.06	Healthy	Healthy
+ERR1607589	healthy.biopsy.07	Healthy	Healthy
+ERR1607590	healthy.biopsy.08	Healthy	Healthy
+ERR1607591	healthy.biopsy.09	Healthy	Healthy
+ERR1607592	healthy.biopsy.10	Healthy	Healthy
+ERR1607593	healthy.biopsy.11	Healthy	Healthy
+ERR1607594	healthy.biopsy.12	Healthy	Healthy
+ERR1607595	healthy.biopsy.13	Healthy	Healthy
+ERR1607596	healthy.biopsy.14	Healthy	Healthy
+ERR1607597	healthy.biopsy.15	Healthy	Healthy
+ERR1607598	healthy.biopsy.16	Healthy	Healthy
+ERR1607599	healthy.biopsy.17	Healthy	Healthy
+ERR1607600	healthy.biopsy.18	Healthy	Healthy
+ERR1607601	healthy.biopsy.19	Healthy	Healthy
+ERR1607602	healthy.biopsy.20	Healthy	Healthy
+ERR1607603	healthy.biopsy.21	Healthy	Healthy
+ERR1607604	healthy.biopsy.22	Healthy	Healthy
+ERR1607605	healthy.biopsy.23	Healthy	Healthy
+ERR1607606	healthy.biopsy.24	Healthy	Healthy
+ERR1607607	healthy.biopsy.25	Healthy	Healthy
+ERR1607608	healthy.biopsy.26	Healthy	Healthy
+ERR1607662	red.biopsy.01	HS	HS Legional Skin
+ERR1607663	red.biopsy.02	HS	HS Legional Skin
+ERR1607664	red.biopsy.03	HS	HS Legional Skin
+ERR1607665	red.biopsy.04	HS	HS Legional Skin
+ERR1607666	red.biopsy.05	HS	HS Legional Skin
+ERR1607667	red.biopsy.06	HS	HS Legional Skin
+ERR1607668	red.biopsy.07	HS	HS Legional Skin
+ERR1607669	red.biopsy.08	HS	HS Legional Skin
+ERR1607670	red.biopsy.09	HS	HS Legional Skin
+ERR1607671	red.biopsy.10	HS	HS Legional Skin
+ERR1607672	red.biopsy.11	HS	HS Legional Skin
+ERR1607673	red.biopsy.12	HS	HS Legional Skin
+ERR1607674	red.biopsy.14	HS	HS Legional Skin
+ERR1607675	red.biopsy.15	HS	HS Legional Skin
+ERR1607676	red.biopsy.16	HS	HS Legional Skin
+ERR1607677	red.biopsy.17	HS	HS Legional Skin
+ERR1607678	red.biopsy.18	HS	HS Legional Skin
+ERR1607679	red.biopsy.19	HS	HS Legional Skin
+ERR1607680	red.biopsy.20	HS	HS Legional Skin
+ERR1607681	red.biopsy.21	HS	HS Legional Skin
+ERR1607682	red.biopsy.22	HS	HS Legional Skin
+ERR1607683	red.biopsy.23	HS	HS Legional Skin
+ERR1607684	red.biopsy.24	HS	HS Legional Skin
+ERR1607685	red.biopsy.25	HS	HS Legional Skin
+ERR1607686	red.biopsy.26	HS	HS Legional Skin
+ERR1607687	red.biopsy.27	HS	HS Legional Skin
+ERR1607688	red.biopsy.28	HS	HS Legional Skin
+ERR1607689	red.biopsy.29	HS	HS Legional Skin
+ERR1607690	red.biopsy.30	HS	HS Legional Skin
+ERR1607691	red.biopsy.31	HS	HS Legional Skin
+ERR1607556	green.biopsy.01	HS	HS Non-Legional Skin
+ERR1607557	green.biopsy.02	HS	HS Non-Legional Skin
+ERR1607558	green.biopsy.03	HS	HS Non-Legional Skin
+ERR1607559	green.biopsy.04	HS	HS Non-Legional Skin
+ERR1607560	green.biopsy.05	HS	HS Non-Legional Skin
+ERR1607561	green.biopsy.06	HS	HS Non-Legional Skin
+ERR1607562	green.biopsy.07	HS	HS Non-Legional Skin
+ERR1607563	green.biopsy.08	HS	HS Non-Legional Skin
+ERR1607564	green.biopsy.09	HS	HS Non-Legional Skin
+ERR1607565	green.biopsy.10	HS	HS Non-Legional Skin
+ERR1607566	green.biopsy.11	HS	HS Non-Legional Skin
+ERR1607567	green.biopsy.12	HS	HS Non-Legional Skin
+ERR1607568	green.biopsy.14	HS	HS Non-Legional Skin
+ERR1607569	green.biopsy.15	HS	HS Non-Legional Skin
+ERR1607570	green.biopsy.16	HS	HS Non-Legional Skin
+ERR1607571	green.biopsy.17	HS	HS Non-Legional Skin
+ERR1607572	green.biopsy.18	HS	HS Non-Legional Skin
+ERR1607573	green.biopsy.19	HS	HS Non-Legional Skin
+ERR1607574	green.biopsy.20	HS	HS Non-Legional Skin
+ERR1607575	green.biopsy.21	HS	HS Non-Legional Skin
+ERR1607576	green.biopsy.22	HS	HS Non-Legional Skin
+ERR1607577	green.biopsy.24	HS	HS Non-Legional Skin
+ERR1607578	green.biopsy.25	HS	HS Non-Legional Skin
+ERR1607579	green.biopsy.26	HS	HS Non-Legional Skin
+ERR1607580	green.biopsy.27	HS	HS Non-Legional Skin
+ERR1607581	green.biopsy.28	HS	HS Non-Legional Skin
+ERR1607582	green.biopsy.29	HS	HS Non-Legional Skin
+ERR1607583	green.biopsy.30	HS	HS Non-Legional Skin
+ERR1607584	green.biopsy.31	HS	HS Non-Legional Skin
