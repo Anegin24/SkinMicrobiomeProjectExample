@@ -107,6 +107,14 @@ qiime feature-table filter-features \
   --o-filtered-table filtered-table.qza \
   --p-exclude-ids
 ```
+## Filtering Feature-table by Group
+  ```bash
+  qiime feature-table filter-samples \
+    --i-table table.qza \
+    --m-metadata-file sample-metadata.tsv \
+    --p-where '[Class] IN ("Healthy", "HS Legional Skin","HS Non-Legional Skin")' \
+    --o-filtered-table filtered-table.qza
+  ```
 ## Generate phylogenetic tree
   ```bash
   qiime phylogeny align-to-tree-mafft-fasttree \
