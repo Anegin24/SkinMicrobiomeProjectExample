@@ -115,6 +115,14 @@ qiime feature-table filter-features \
     --p-where '[Class] IN ("Healthy", "HS Legional Skin","HS Non-Legional Skin")' \
     --o-filtered-table filtered-table.qza
   ```
+  ```bash
+  qiime feature-table filter-seqs \
+    --i-data rep-seqs.qza \
+    --i-table filtered-table.qza \
+    --m-metadata-file sample-metadata.tsv \
+    --p-where '[Class] IN ("Healthy", "HS Legional Skin","HS Non-Legional Skin")' \
+    --o-filtered-data filtered-rep-seqs.qza
+  ```
 ## Generate phylogenetic tree
   ```bash
   qiime phylogeny align-to-tree-mafft-fasttree \
