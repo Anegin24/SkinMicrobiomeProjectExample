@@ -124,7 +124,7 @@ qiime feature-table filter-features \
 ## Generate phylogenetic tree
   ```bash
   qiime phylogeny align-to-tree-mafft-fasttree \
-  --i-sequences rep-seqs.qza \
+  --i-sequences filtered-rep-seqs.qza \
   --o-alignment aligned-rep-seqs.qza \
   --o-masked-alignment masked-aligned-rep-seqs.qza \
   --o-tree unrooted-tree.qza \
@@ -135,37 +135,25 @@ qiime feature-table filter-features \
  ```bash
   qiime feature-classifier classify-sklearn \
       --i-classifier silva138_AB_V3-V4_classifier.qza \
-      --i-reads rep-seqs.qza \
+      --i-reads filtered-rep-seqs.qza \
       --o-classification taxonomy.qza
       --p-n-jobs 20
   qiime metadata tabulate \
     --m-input-file taxonomy.qza \
     --o-visualization taxonomy.qzv
   qiime taxa barplot \
-    --i-table table.qza \
+    --i-table filtered-table.qza \
     --i-taxonomy taxonomy.qza \
     --m-metadata-file sample-metadata.tsv \
     --o-visualization taxa-bar-plots.qzv
 ```
 ## Alpha/Beta diversity measurement
-  
-  ```bash
-  qiime feature-table summarize \
-  --i-table table.qza \
-  --o-visualization table.qzv \
-  --m-sample-metadata-file sample-metadata.tsv
-  qiime feature-table tabulate-seqs \
-  --i-data rep-seqs.qza \
-  --o-visualization rep-seqs.qzv
-  ```
-
   ```bash
   qiime diversity core-metrics-phylogenetic \
   --i-phylogeny rooted-tree.qza \
   --i-table table.qza \
-  --p-sampling-depth 759 \
+  --p-sampling-depth 1483 \
   --m-metadata-file sample-metadata.tsv \
   --output-dir core-metrics-results
   ```
-  
 ## Differential Significant
