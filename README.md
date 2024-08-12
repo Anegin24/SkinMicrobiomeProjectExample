@@ -119,8 +119,6 @@ qiime feature-table filter-features \
   qiime feature-table filter-seqs \
     --i-data rep-seqs.qza \
     --i-table filtered-table.qza \
-    --m-metadata-file sample-metadata.tsv \
-    --p-where '[Class] IN ("Healthy", "HS Legional Skin","HS Non-Legional Skin")' \
     --o-filtered-data filtered-rep-seqs.qza
   ```
 ## Generate phylogenetic tree
