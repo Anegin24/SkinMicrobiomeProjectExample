@@ -148,6 +148,7 @@ qiime feature-table filter-features \
     --o-visualization taxa-bar-plots.qzv
 ```
 ## Alpha/Beta diversity measurement
+*Automatic
   ```bash
   qiime diversity core-metrics-phylogenetic \
   --i-phylogeny rooted-tree.qza \
@@ -156,4 +157,44 @@ qiime feature-table filter-features \
   --m-metadata-file sample-metadata.tsv \
   --output-dir core-metrics-results
   ```
+*Manual
+  ```bash
+  qiime diversity alpha-phylogenetic
+  --i-table filtered-table.qza
+  --i-phylogeny rooted-tree.qza
+  --p-metric faith_pd
+  --o-alpha-diversity faith_pd_vector.qza
+
+  qiime diversity alpha \
+  --i-table filtered-table.qza \
+  --p-metric shannon \
+  --o-alpha-diversity shannon.qza
+
+  qiime diversity alpha \
+  --i-table filtered-table.qza \
+  --p-metric chao1 \
+  --o-alpha-diversity chao1.qza
+
+  qiime diversity alpha \
+  --i-table filtered-table.qza \
+  --p-metric pielou_e \
+  --o-alpha-diversity pielou.qza
+  
+  qiime tools export \
+  --input-path faith_pd_vector.qza \
+  --output-path faithpd
+
+  qiime tools export \
+  --input-path shannon.qza \
+  --output-path shannon
+
+  qiime tools export \
+  --input-path pielou.qza \
+  --output-path pielou
+
+  qiime tools export \
+  --input-path chao1.qza \
+  --output-path chao1
+  ```
+
 ## Differential Significant
