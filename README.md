@@ -35,7 +35,7 @@ Biopsy specimens were analyzed at the Department of Microbiology and Infection C
     mkdir fastq
     mv *.fastq fastq
     cd fastq
-    gzip fastq
+    gzip *fastq
     mkdir sra
     mv *.sra sra
   ```
