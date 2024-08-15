@@ -197,4 +197,4 @@ qiime feature-table filter-features \
   --output-path chao1
   ```
 
-[Visualization process using R](https://raw.githubusercontent.com/Anegin24/SkinMicrobiomeProjectExample/main/SkinMicrobiome.R)
+[Visualization process using R](https://github.com/Anegin24/SkinMicrobiomeProjectExample/blob/main/SkinMicrobiome.R)
