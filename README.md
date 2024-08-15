@@ -197,4 +197,4 @@ qiime feature-table filter-features \
   --output-path chao1
   ```
 
-*After that, we perform RStudio Script
+[Visualization process using R](https://raw.githubusercontent.com/Anegin24/SkinMicrobiomeProjectExample/main/SkinMicrobiome.R)
